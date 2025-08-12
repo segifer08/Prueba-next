@@ -1,9 +1,9 @@
 'use client'
 
-export default function Title() {
+export default function Title(props) {
     return(
         <>
-            <h3>Titulo epico</h3>
+            <h2>{props.text}</h2>
         </>
     )
 }
