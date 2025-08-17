@@ -10,23 +10,22 @@ export default function Contador(){
     const [tf, setTF] = useState(false)
 
     useEffect(() => {
-        if(cuenta == 18){
+        if(cuenta >=  20 || cuenta <= -20){
             setCuenta(0)
         }
-
     }, [cuenta])
 
-    function ver(event){
-        console.log(event)
-        setTF(event.target.checked)
-    }
-
     function MasOMenos(){
-        if(tf == true){
+        console.log(tf)
+        if(tf){
             setCuenta(cuenta + 1)
         } else {
             setCuenta(cuenta - 1)
         }
+    }
+
+    function ver(event){
+        setTF(event.target.checked)
     }
 
     return(
