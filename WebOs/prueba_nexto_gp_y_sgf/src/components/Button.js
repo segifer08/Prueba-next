@@ -1,15 +1,19 @@
 'use client'
+import styles from "@/components/Button.module.css"
+import clsx from "clsx"
 
 export default function Button(props) {
-    function imprimirHola(){
-            console.log("Hola")
-        }
-    function imprimirChau(){
-            console.log("Adios")
-        }
     return(
         <>
-            <button onClick={props.onClick}>{props.text}</button>
+            <button className={
+                clsx(
+                    {
+                        [styles.button] : true,
+                        [styles.mas] : props.color == "verde",
+                        [styles.menos] : props.color == "azul"
+                    }
+                )
+            } onClick={props.onClick}>{props.text}</button>
         </>
     )
 }
