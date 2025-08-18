@@ -25,7 +25,8 @@ export default function Contador(){
     }
 
     function ver(event){
-        setTF(event.target.checked)
+        console.log(event.target.checked)
+        setTF(!tf)
     }
 
     return(
@@ -34,8 +35,8 @@ export default function Contador(){
 
             <h3>Contador: {cuenta}</h3>
 
-            <Button text={"Subir o Bajar"} onClick={MasOMenos()}></Button>
-            <Input type={"checkbox"} onChange={ver()}></Input>
+            <Button text={"Subir o Bajar"} onClick={MasOMenos}></Button>
+            <Input type={"checkbox"} onChange={ver}></Input>
         </>
     )
 }

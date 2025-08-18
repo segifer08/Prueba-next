@@ -1,6 +1,7 @@
 'use client'
 
 export default function Input(props) {
+    console.log("cargo bien")
     function cambio1(){
             console.log("Cambie 1")
         }
